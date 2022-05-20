@@ -1,0 +1,15 @@
+const mongoose = require('mongoose');
+
+const dbConnect = () =>{
+    DB_LOCAL_URI='mongodb://localhost:27017/bookeeping'
+
+const connectDatabase = () =>{
+    mongoose.connect('mongodb://localhost:27017/bookeeping',{
+}).then(con=>{
+    console.log(`MongoDB Database connected with HOST: ${con.connection.host}`)
+    .catch(err =>console.log(err));
+})
+}
+}
+
+module.exports = dbConnect;
